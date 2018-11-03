@@ -1,0 +1,127 @@
+.home {
+  padding: 2rem 0;
+  @include respond(smaller) {
+    padding: 1rem 0.5rem;
+  }
+  &-heading {
+    @include font-size(x-large);
+    @include font-weight(bold);
+    margin: 0;
+    line-height: 55px;
+    letter-spacing: 1.75px;
+    @include respond(smaller) {
+      @include font-size(regular);
+      line-height: 30px;
+      letter-spacing: 1.2px;
+    }
+  }
+  &-desc {
+    @include font-size(large);
+    @include font-weight(regular);
+    line-height: 45px;
+    letter-spacing: 1.5px;
+    margin: 3rem 0;
+    @include respond(smaller) {
+      @include font-size(regular);
+      line-height: 25px;
+      letter-spacing: 1px;
+      margin: 1.5rem 0;
+    }
+  }
+
+  .whatIDo {
+    .image {
+      &-block {
+        display: block;
+        @include respond(largest) {
+          display: none;
+        }
+      }
+    }
+    .skill {
+      &s {
+        padding-right: 1rem;
+        @include respond(large) {
+          padding-right: 0;
+        }
+        &-block {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+      &-list {
+        margin: 0;
+        display: flex;
+        &:nth-child(1) {
+          margin-bottom: 3rem;
+        }
+        @include respond(largest) {
+          margin-bottom: 0 !important;
+          margin-top: 2rem;
+          &:nth-child(1) {
+            margin-top: 3rem;
+          }
+        }
+
+        @include respond(smaller) {
+          margin-top: 1rem;
+          &:nth-child(1) {
+            margin-top: 2rem;
+          }
+        }
+      }
+      &-icon {
+        width: 70px;
+        height: 70px;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 2rem;
+        i {
+          @include font-size(large);
+        }
+
+        @include respond(smaller) {
+          width: 30px;
+          height: 30px;
+          i {
+            @include font-size(x-small);
+          }
+        }
+      }
+      &-title {
+        @include font-weight(bold);
+        font-size: 25px;
+        line-height: normal;
+        margin-bottom: 1.2rem;
+        @include respond(smaller) {
+          font-size: 16px;
+          letter-spacing: 0;
+        }
+      }
+      &-description {
+        @include font-size(medium);
+        @include font-weight(regular);
+        @include respond(smaller) {
+          @include font-size(small);
+        }
+      }
+    }
+  }
+
+  .contact {
+    &-text {
+      @include font-size(medium);
+      @include font-weight(regular);
+      line-height: 35px;
+      letter-spacing: 1.5px;
+      @include respond(smaller) {
+        @include font-size(small);
+        line-height: 24px;
+        letter-spacing: 1.05px;
+      }
+    }
+  }
+}

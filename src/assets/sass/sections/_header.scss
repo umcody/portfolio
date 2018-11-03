@@ -1,0 +1,6 @@
+.header {
+  padding-top: 1.5rem;
+  @include respond(smaller) {
+    padding-top: 0.75rem;
+  }
+}

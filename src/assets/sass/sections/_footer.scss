@@ -1,0 +1,27 @@
+.footer {
+  padding: 4rem 0;
+  border-top: solid 1px color(lighter);
+  @include respond(smaller) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  &-link {
+    font-size: 35px;
+    margin-right: 2rem;
+    @include respond(smaller) {
+      @include font-size(medium);
+    }
+  }
+
+  .copyright {
+    margin-top: 1rem;
+    &-text {
+      @include font-size(small);
+      @include font-weight(regular);
+      line-height: normal;
+      letter-spacing: 0.47px;
+      text-transform: uppercase;
+    }
+  }
+}
