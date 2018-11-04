@@ -1,0 +1,29 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  @include font-size(regular);
+  @include font-weight(regular);
+  line-height: 33px;
+  letter-spacing: 0px;
+  color: color(black);
+}
+
+.page {
+  background: color(primary);
+  color: color(white);
+  transition: background-color 0.25s;
+
+  &__light {
+    background: color(light);
+    color: color(primary);
+  }
+}
+
+.section {
+  padding: 3rem 0;
+  @include respond(largest) {
+    padding: 2rem 0;
+  }
+  @include respond(smaller) {
+    padding: 1rem 0;
+  }
+}

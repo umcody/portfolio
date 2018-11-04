@@ -1,0 +1,25 @@
+.modal {
+  &-dialog {
+    max-width: 80%;
+    height: 80%;
+
+    @include respond(large) {
+      height: auto;
+    }
+
+    @include respond(medium) {
+      max-width: 90%;
+    }
+
+    @include respond(small) {
+      max-width: 100%;
+    }
+  }
+  &-content {
+    height: 100%;
+    border-radius: 0;
+  }
+  &-body {
+    padding: 0;
+  }
+}

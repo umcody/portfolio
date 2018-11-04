@@ -1,0 +1,51 @@
+.about {
+  display: flex;
+  position: relative;
+
+  @include respond(large) {
+    flex-wrap: wrap;
+  }
+
+  .close {
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  &-heading {
+    padding-bottom: 3rem;
+    .heading {
+      &-text {
+        color: color(primary);
+      }
+      &-line {
+        border-top-color: color(primary);
+      }
+    }
+  }
+
+  &-half {
+    width: 50%;
+
+    @include respond(largest) {
+      width: 100%;
+    }
+  }
+  &-left {
+    background: color(light);
+    padding: 1rem 3rem;
+    color: color(primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include respond(smaller) {
+      padding: 1rem 2rem;
+    }
+  }
+  &-right {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+  }
+}

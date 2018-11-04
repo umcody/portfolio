@@ -1,0 +1,60 @@
+// Typography
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700");
+
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700
+);
+
+$font-sizes: (
+  x-small: 12px,
+  small: 14px,
+  regular: 18px,
+  medium: 20px,
+  large: 30px,
+  x-large: 35px
+);
+
+.heading {
+  display: flex;
+  align-items: center;
+
+  &-line {
+    border-top-color: color(white);
+    width: 130px;
+    margin-right: 2.4rem;
+    @include respond(smaller) {
+      width: 50px;
+      margin-right: 1.5rem;
+    }
+  }
+
+  &-text {
+    text-transform: uppercase;
+    @include font-size(large);
+    @include font-weight(medium);
+    margin: 0;
+    letter-spacing: 2.5px;
+    line-height: 0;
+    @include respond(smaller) {
+      @include font-size(small);
+    }
+  }
+}
+
+.paragraph {
+  @include font-size(regular);
+  @include font-weight(regular);
+  line-height: 35px;
+  @include respond(smaller) {
+    @include font-size(small);
+  }
+}
+
+.page__light {
+  .heading-line {
+    border-top-color: color(primary);
+  }
+}

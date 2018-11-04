@@ -1,0 +1,82 @@
+.project {
+  background-color: color(white);
+  color: color(black);
+  width: 95%;
+  margin-left: 0;
+  margin-right: auto;
+  box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.45);
+  @include respond(medium) {
+    width: 100%;
+  }
+
+  &__right {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .text-block {
+    padding: 3rem;
+    padding-right: calc(3rem - 30px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    @include respond(smaller) {
+      padding: 1.5rem;
+    }
+  }
+
+  &-title {
+    font-size: 26px;
+    @include font-weight(bold);
+    text-transform: capitalize;
+    letter-spacing: 0;
+    line-height: normal;
+    @include respond(largest) {
+      @include font-size(medium);
+    }
+    @include respond(smaller) {
+      font-size: 16px;
+    }
+  }
+
+  &-category {
+    @include font-size(small);
+    @include font-weight(regular);
+    text-transform: uppercase;
+    letter-spacing: 1.13px;
+    line-height: normal;
+    margin: 1.2rem 0;
+    @include respond(largest) {
+      @include font-size(x-small);
+    }
+  }
+
+  &-description {
+    @include font-size(regular);
+    @include font-weight(regular);
+    letter-spacing: 0;
+    line-height: 33px;
+    @include respond(largest) {
+      @include font-size(small);
+      line-height: 30px;
+    }
+    @include respond(smaller) {
+      line-height: 33px;
+    }
+  }
+
+  .image {
+  }
+}
+
+.page__light {
+  .project {
+    background-color: color(primary);
+    .text-block {
+      color: color(white);
+    }
+  }
+}
