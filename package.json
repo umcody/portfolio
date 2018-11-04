@@ -11,6 +11,9 @@
     "react-scripts": "2.1.1",
     "reactstrap": "^6.5.0"
   },
+  "engines": {
+    "node": "8.x"
+  },
   "scripts": {
     "dev": "sass --watch src/assets/sass:src/assets/css | react-scripts start",
     "start": "serve -s build",
