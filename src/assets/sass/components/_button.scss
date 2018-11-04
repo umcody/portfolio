@@ -72,7 +72,7 @@
 
     &:after {
       width: 80%;
-      background-color: #26408b;
+      background-color: color(primary);
       background: linear-gradient(270deg, color(light-blue), color(primary));
       transition: transform 0.6s cubic-bezier(0.694, 0.048, 0.335, 1);
       z-index: 2;
@@ -122,6 +122,18 @@
       i {
         color: color(primary);
       }
+    }
+  }
+}
+
+.page__light {
+  .button-icon i {
+    color: color(primary);
+  }
+  .button__secondary {
+    color: color(white);
+    .button-icon i {
+      color: color(white);
     }
   }
 }

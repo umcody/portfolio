@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import Loading from "./components/Loader";
+import Works from "pages/Works";
 
 const Home = lazy(() => import("pages/Home"));
 
@@ -36,6 +37,15 @@ class RouterComponent extends React.Component {
               render={props => (
                 <Suspense fallback={<Loading show />}>
                   <Home {...props} />
+                </Suspense>
+              )}
+            />
+            <Route
+              exact
+              path="/works"
+              render={props => (
+                <Suspense fallback={<Loading show />}>
+                  <Works {...props} />
                 </Suspense>
               )}
             />

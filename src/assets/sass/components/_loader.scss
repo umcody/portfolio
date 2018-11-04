@@ -1,0 +1,97 @@
+$len: 242.776657104492px;
+$time: 3s;
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: #235aa6;
+  animation: backgroundAnimation $time ease-in-out infinite;
+
+  &-block {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 70px;
+
+    .bg div,
+    & > .fg > div > div {
+      width: 70px;
+      height: 70px;
+      border: 10px solid color(white);
+      box-sizing: border-box;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .right-bg {
+      transform: translate(100%, 0);
+      left: -10px;
+    }
+
+    & > .fg {
+      filter: drop-shadow(0 0 6px color(red));
+      & > .bottom {
+        &-right-rect {
+          left: -10px;
+          transform: translateX(100%) scale(1, -1);
+          & > div {
+            animation-delay: 0.25s;
+          }
+        }
+        &-left-rect {
+          transform: scale(-1);
+          & > div {
+            animation-delay: 0.75s;
+          }
+        }
+      }
+      & > .top {
+        &-right-rect {
+          left: -10px;
+          transform: translateX(100%) scale(-1, 1);
+          & > div {
+            animation-delay: 0.5s;
+          }
+        }
+      }
+      & > div {
+        clip: rect(0, 70px, 35px, 0);
+        position: absolute;
+        & > div {
+          border-color: color(red) color(red) transparent transparent;
+          transform: rotate(135deg);
+          animation: spin 1s linear infinite;
+          position: static;
+        }
+      }
+    }
+  }
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-color: color(primary);
+  }
+  50% {
+    background-color: lighten(color(primary), 10%);
+  }
+  100% {
+    background-color: lighten(color(primary), 20%);
+  }
+}
+
+@keyframes spin {
+  50%,
+  100% {
+    transform: rotate(495deg);
+  }
+}

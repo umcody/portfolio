@@ -71,3 +71,12 @@
   .image {
   }
 }
+
+.page__light {
+  .project {
+    background-color: color(primary);
+    .text-block {
+      color: color(white);
+    }
+  }
+}

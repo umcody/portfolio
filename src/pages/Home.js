@@ -1,33 +1,87 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "components/Header";
 import Footer from "components/Footer";
-import project1 from "../assets/img/project1.png";
+import Project from "components/Project";
+import remita from "../assets/img/remita.jpg";
+import osp from "../assets/img/osp.jpg";
+import reliance from "../assets/img/reliance.jpg";
 import blog from "../assets/img/blog.png";
-
+import About from "components/About";
+import Loading from "components/Loader";
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggleModal = this.toggleModal.bind(this);
+
+    this.state = {
+      modal: false
+    };
+  }
+  toggleModal() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
   render() {
+    const projects = [
+      {
+        id: 1,
+        name: "Remita",
+        category: "Web design",
+        description:
+          "Remita is an all-in-one mobile app that allows you switch between your personal and corporate profiles on your device so you authorise payments quickly.",
+        image: remita,
+        imageAlt: "remita",
+        url: "https://www.remita.net/mobileapp/",
+        right: false
+      },
+      {
+        id: 2,
+        name: "Reliance",
+        category: "Web design",
+        description:
+          "Reliance is a home care agency that shares a passion for meeting the physical, social, emotional and health care needs of consumers and their family.",
+        image: reliance,
+        imageAlt: "reliance",
+        url: "http://rfcservice.com",
+        right: true
+      },
+      {
+        id: 3,
+        name: "OSP DPR",
+        category: "Mobile app",
+        description:
+          "The OSP (Offshore Safety Permit) Project was introduced by the DPR for Safety and Personnel Accountability of all offshore workers within the Nigerian Oil and Gas Industry.",
+        image: osp,
+        imageAlt: "osp",
+        url: "https://play.google.com/store/apps/details?id=com.wael.dprosp.app",
+        right: false
+      }
+    ];
     return (
-      <div className="page page__dark">
-        <Header />
+      <div id="page" className="page">
+        {/* <Loading show /> */}
+        <Header toggleModal={this.toggleModal} />
+        <About showModal={this.state.modal} modalFunc={this.toggleModal} />
         <div className="home">
           <div className="container">
             <div className="section">
               <div className="row">
                 <div className="col-md-12 col-lg-7">
                   <h5 className="home-heading">
-                    I’m Oluwasegun Omilabu, a freelance front-end developer and designer based in Lagos, Nigeria.
+                    I’m Olusegun Omilabu, a freelance front-end developer and designer based in Lagos, Nigeria.
                   </h5>
-                  <p className="home-desc">
-                    I build websites, develop web and mobile applications and I do graphics design.
-                  </p>
+                  <p className="home-desc">I build websites, develop web and mobile applications and I do design.</p>
                   <div className="button-block">
-                    <a href="http://google.com" className="button">
+                    <Link to="#" className="button" onClick={this.toggleModal}>
                       <span className="button-text">About Me</span>
                       <div className="button-mask" />
                       <span className="button-icon">
                         <i className="fas fa-long-arrow-alt-right" />
                       </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -44,92 +98,18 @@ class Home extends React.Component {
               </div>
             </div>
 
-            <div className="section">
-              <div className="project">
-                <div className="row">
-                  <div className="col-md-12 col-lg-4">
-                    <div className="text-block">
-                      <h5 className="project-title">Project Name</h5>
-                      <p className="project-category">Category</p>
-                      <p className="project-description">
-                        A brief description of the project goes here. A brief description of the project goes here. A
-                        brief description of the project goes here. A brief description of the project goes here.
-                      </p>
-                      <a href="http://google.com" className="button button__secondary" title="">
-                        <span className="button-text">view project</span>
-                        <div className="button-mask" />
-                        <span className="button-icon">
-                          <i className="fas fa-long-arrow-alt-right" />
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-md-12 col-lg-8">
-                    <div className="image">
-                      <img src={project1} className="img-fluid" alt="project1" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="section">
-              <div className="project project__right">
-                <div className="row">
-                  <div className="col-md-12 col-lg-4">
-                    <div className="text-block">
-                      <h5 className="project-title">Project Name</h5>
-                      <p className="project-category">Category</p>
-                      <p className="project-description">
-                        A brief description of the project goes here. A brief description of the project goes here. A
-                        brief description of the project goes here. A brief description of the project goes here.
-                      </p>
-                      <a href="http://google.com" className="button button__secondary" title="">
-                        <span className="button-text">view project</span>
-                        <div className="button-mask" />
-                        <span className="button-icon">
-                          <i className="fas fa-long-arrow-alt-right" />
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-md-12 col-lg-8">
-                    <div className="image">
-                      <img src={project1} className="img-fluid" alt="project1" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="section">
-              <div className="project">
-                <div className="row">
-                  <div className="col-md-12 col-lg-4">
-                    <div className="text-block">
-                      <h5 className="project-title">Project Name</h5>
-                      <p className="project-category">Category</p>
-                      <p className="project-description">
-                        A brief description of the project goes here. A brief description of the project goes here. A
-                        brief description of the project goes here. A brief description of the project goes here.
-                      </p>
-                      <a href="http://google.com" className="button button__secondary" title="">
-                        <span className="button-text">view project</span>
-                        <div className="button-mask" />
-                        <span className="button-icon">
-                          <i className="fas fa-long-arrow-alt-right" />
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-md-12 col-lg-8">
-                    <div className="image">
-                      <img src={project1} className="img-fluid" alt="project1" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {projects.map(project => (
+              <Project
+                key={project.id}
+                name={project.name}
+                category={project.category}
+                description={project.description}
+                image={project.image}
+                imageAlt={project.imageAlt}
+                url={project.url}
+                right={project.right}
+              />
+            ))}
 
             <div className="section whatIDo">
               <div className="row">
@@ -195,7 +175,7 @@ class Home extends React.Component {
                     awesome together.
                   </p>
                   <div className="button-block">
-                    <a href="http://google.com" className="button">
+                    <a href="mailto:omilabuolusegun@gmail.com" className="button">
                       <span className="button-text">Say Hello</span>
                       <div className="button-mask" />
                       <span className="button-icon">

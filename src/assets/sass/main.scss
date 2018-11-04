@@ -13,14 +13,17 @@
 
 // components
 @import "components/button";
+@import "components/loader";
+@import "components/modal";
 @import "components/nav";
 @import "components/project";
 
 // sections
-@import "sections/header";
 @import "sections/footer";
+@import "sections/header";
 
 // pages
+@import "pages/about";
 @import "pages/home";
 @import "pages/works";
 

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from "reactstrap";
 import avatar from "../assets/img/myAvatar.png";
 
@@ -7,13 +8,27 @@ class Navigation extends React.Component {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.toggleThemeSwitch = this.toggleThemeSwitch.bind(this);
+
     this.state = {
-      isOpen: false
+      isOpen: false,
+      modal: false,
+      darkTheme: true
     };
   }
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
+    });
+  }
+  toggleThemeSwitch() {
+    if (this.state.darkTheme) {
+      document.getElementById("page").classList.add("page__light");
+    } else {
+      document.getElementById("page").classList.remove("page__light");
+    }
+    this.setState({
+      darkTheme: !this.state.darkTheme
     });
   }
   render() {
@@ -25,21 +40,34 @@ class Navigation extends React.Component {
               <img className="img-fluid" src={avatar} alt="avatar" />
             </div>
           </NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
+
+          <div className="mobile-icons">
+            <div className="mobile-theme-switch" onClick={this.toggleThemeSwitch}>
+              <i className="fas fa-adjust" />
+            </div>
+            <NavbarToggler onClick={this.toggle} />
+          </div>
+
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#">About</NavLink>
+                <NavLink href="#" onClick={this.props.toggleModal}>
+                  About
+                </NavLink>
+              </NavItem>
+              <NavItem className={this.props.activeLink === "works" ? "active" : ""}>
+                <NavLink href="/works">Works</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Works</NavLink>
+                <NavLink href="mailto:omilabuolusegun@gmail.com">Contact</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#">Contact</NavLink>
+                <NavLink href="#" onClick={this.toggleThemeSwitch}>
+                  <div className="theme-switch">
+                    <i className="fas fa-adjust" />
+                  </div>
+                </NavLink>
               </NavItem>
-              {/* <NavItem>
-                <NavLink href="#">Contact</NavLink>
-              </NavItem> */}
             </Nav>
           </Collapse>
         </Navbar>
@@ -47,5 +75,11 @@ class Navigation extends React.Component {
     );
   }
 }
+
+Navigation.propTypes = {
+  darkTheme: PropTypes.bool,
+  activeLink: PropTypes.string,
+  toggleModal: PropTypes.func
+};
 
 export default Navigation;
