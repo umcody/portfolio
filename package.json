@@ -16,11 +16,11 @@
     "node": "8.x"
   },
   "scripts": {
-    "start": "sass --watch src/assets/sass:src/assets/css | react-scripts start",
+    "dev": "sass --watch src/assets/sass:src/assets/css | react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "heroku-postbuild": "npm run build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
