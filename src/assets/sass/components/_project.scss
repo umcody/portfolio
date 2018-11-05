@@ -59,6 +59,7 @@
     @include font-weight(regular);
     letter-spacing: 0;
     line-height: 33px;
+    color: rgba(color(black), 0.8);
     @include respond(largest) {
       @include font-size(small);
       line-height: 30px;
@@ -77,6 +78,9 @@
     background-color: color(primary);
     .text-block {
       color: color(white);
+    }
+    &-description {
+      color: rgba(color(white), 0.8);
     }
   }
 }
