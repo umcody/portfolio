@@ -47,7 +47,7 @@ $font-sizes: (
 .paragraph {
   @include font-size(regular);
   @include font-weight(regular);
-  line-height: 35px;
+  line-height: 30px;
   @include respond(smaller) {
     @include font-size(small);
   }

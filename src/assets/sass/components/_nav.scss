@@ -11,6 +11,13 @@
           color: color(red);
         }
       }
+      &:last-child {
+        &:hover {
+          .nav-link {
+            color: inherit;
+          }
+        }
+      }
     }
     &-link {
       color: color(white);
