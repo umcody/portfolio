@@ -480,7 +480,7 @@ a:hover {
   }
 }
 .footer-link {
-  font-size: 35px;
+  font-size: 25px;
   margin-right: 2rem;
 }
 @media only screen and (max-width: 31.25em) {
@@ -649,7 +649,7 @@ a:hover {
 .home .whatIDo .skill-icon {
   width: 70px;
   height: 70px;
-  background: rgba(2, 29, 68, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -695,12 +695,14 @@ a:hover {
   line-height: 35px;
   letter-spacing: 1.5px;
   color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
 }
 @media only screen and (max-width: 31.25em) {
   .home .contact-text {
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 1.05px;
+    margin-bottom: 1rem;
   }
 }
 
