@@ -8,7 +8,6 @@ import osp from "../assets/img/osp.jpg";
 import reliance from "../assets/img/reliance.jpg";
 import blog from "../assets/img/blog.png";
 import About from "components/About";
-import Loading from "components/Loader";
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -62,7 +61,6 @@ class Home extends React.Component {
     ];
     return (
       <div id="page" className="page">
-        {/* <Loading show /> */}
         <Header toggleModal={this.toggleModal} />
         <About showModal={this.state.modal} modalFunc={this.toggleModal} />
         <div className="home">

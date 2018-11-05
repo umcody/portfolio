@@ -57,7 +57,7 @@ a:hover {
 .paragraph {
   font-size: 18px;
   font-weight: 400;
-  line-height: 35px;
+  line-height: 30px;
 }
 @media only screen and (max-width: 31.25em) {
   .paragraph {
@@ -316,6 +316,9 @@ a:hover {
 .navigation .nav-item:hover .nav-link {
   color: #ff3e55;
 }
+.navigation .nav-item:last-child:hover .nav-link {
+  color: inherit;
+}
 .navigation .nav-link {
   color: #ffffff;
   font-weight: 500;
@@ -521,7 +524,7 @@ a:hover {
   right: 1rem;
 }
 .about-heading {
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 }
 .about-heading .heading-text {
   color: #021d44;
@@ -692,6 +695,10 @@ a:hover {
     line-height: 24px;
     letter-spacing: 1.05px;
   }
+}
+
+.page__light .home .whatIDo .skill-icon {
+  background: rgba(2, 29, 68, 0.1);
 }
 
 body {

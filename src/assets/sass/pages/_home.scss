@@ -127,5 +127,9 @@
 }
 
 .page__light {
-  
+  .home {
+    .whatIDo .skill-icon {
+      background: color(light);
+    }
+  }
 }
