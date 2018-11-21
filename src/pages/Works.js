@@ -33,6 +33,7 @@ class Works extends React.Component {
         image: remita,
         imageAlt: "remita",
         url: "https://www.remita.net/mobileapp/",
+        altUrl: "",
         right: false
       },
       {
@@ -44,6 +45,7 @@ class Works extends React.Component {
         image: reliance,
         imageAlt: "reliance",
         url: "http://rfcservice.com",
+        altUrl: "",
         right: true
       },
       {
@@ -55,6 +57,7 @@ class Works extends React.Component {
         image: osp,
         imageAlt: "osp",
         url: "https://play.google.com/store/apps/details?id=com.wael.dprosp.app",
+        altUrl: "https://itunes.apple.com/us/app/offshore-safety-permit/id1441544052?mt=8",
         right: false
       },
       {
@@ -66,6 +69,7 @@ class Works extends React.Component {
         image: stabintel,
         imageAlt: "stabintel",
         url: "http://stabintel.com.s3-website-us-east-1.amazonaws.com/",
+        altUrl: "",
         right: true
       }
     ];
@@ -95,6 +99,7 @@ class Works extends React.Component {
                 image={project.image}
                 imageAlt={project.imageAlt}
                 url={project.url}
+                altUrl={project.altUrl}
                 right={project.right}
               />
             ))}

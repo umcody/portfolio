@@ -126,6 +126,21 @@
   }
 }
 
+.mobile-app {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+
+  &-button {
+    font-size: 20px;
+    font-weight: 500;
+    i {
+      margin-left: 5px;
+    }
+  }
+}
+
 .page__light {
   .button-icon i {
     color: color(primary);

@@ -190,6 +190,20 @@ a:hover {
   color: #021d44;
 }
 
+.mobile-app {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.mobile-app-button {
+  font-size: 20px;
+  font-weight: 500;
+}
+.mobile-app-button i {
+  margin-left: 5px;
+}
+
 .page__light .button-icon i {
   color: #021d44;
 }
