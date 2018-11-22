@@ -19,7 +19,9 @@ class Project extends React.Component {
                   <p className="project-category">{this.props.category}</p>
                   <p className="project-description">{this.props.description}</p>
                   <a
-                    href={isIOS ? (this.props.altUrl !== "" ? this.props.altUrl : this.props.url) : this.props.url}
+                    href={
+                      isIOS ? (!this.isEmpty(this.props.altUrl) ? this.props.altUrl : this.props.url) : this.props.url
+                    }
                     className="button button__secondary"
                     title={`${this.props.name} link`}
                   >
