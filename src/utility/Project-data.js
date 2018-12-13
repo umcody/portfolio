@@ -1,7 +1,10 @@
+import motomata from "../assets/img/motomata.jpg";
+import mygobus from "../assets/img/mygobus.jpg";
 import osp from "../assets/img/osp.jpg";
 import reliance from "../assets/img/reliance.jpg";
 import remita from "../assets/img/remita.jpg";
 import stabintel from "../assets/img/stabintel.jpg";
+import spectranet from "../assets/img/spectranet.jpg";
 
 const projectData = [
   {
@@ -18,13 +21,13 @@ const projectData = [
   },
   {
     id: 2,
-    name: "Reliance",
-    category: "Web design",
+    name: "Spectranet Dealer",
+    category: "UI/UX",
     description:
-      "Reliance is a home care agency that shares a passion for meeting the physical, social, emotional and health care needs of consumers and their family.",
-    image: reliance,
-    imageAlt: "reliance",
-    url: "http://rfcservice.com",
+      "A mobile app that helps spectranet dealers and agents manage inventory, retail and wholesale of spectranet products",
+    image: spectranet,
+    imageAlt: "spectranet",
+    url: "https://marvelapp.com/ac5eb7a",
     altUrl: "",
     right: true
   },
@@ -48,9 +51,46 @@ const projectData = [
       "A technology company that specializes in developing top tier software engineering solutions designed to elevate your business",
     image: stabintel,
     imageAlt: "stabintel",
-    url: "http://stabintel.com.s3-website-us-east-1.amazonaws.com/",
+    url: "https://www.stabintel.com/",
     altUrl: "",
     right: true
+  },
+  {
+    id: 5,
+    name: "Reliance",
+    category: "Web design",
+    description:
+      "Reliance is a home care agency that shares a passion for meeting the physical, social, emotional and health care needs of consumers and their family.",
+    image: reliance,
+    imageAlt: "reliance",
+    url: "http://rfcservice.com",
+    altUrl: "",
+    right: false
+  },
+  {
+    id: 6,
+    name: "Motomata",
+    category: "UI/UX",
+    description: "A web application that helps manages insurance policy registration and renewal",
+    image: motomata,
+    imageAlt: "motomata",
+    url:
+      "https://www.figma.com/proto/HJodmY5mLaGjRWP1AtutxXFh/motomata?node-id=51%3A99&viewport=-98%2C359%2C0.262818&scaling=min-zoom",
+    altUrl:
+      "https://www.figma.com/proto/FSJuFiPwohtk8xvDLYm3QIuW/my-go-bus?node-id=0%3A1992&viewport=120%2C207%2C0.182347&scaling=min-zoom",
+    right: true
+  },
+  {
+    id: 7,
+    name: "Mygobus",
+    category: "UI/UX",
+    description: "A taxi mobile application",
+    image: mygobus,
+    imageAlt: "mygobus",
+    url:
+      "https://www.figma.com/proto/FSJuFiPwohtk8xvDLYm3QIuW/my-go-bus?node-id=0%3A1992&viewport=120%2C207%2C0.182347&scaling=min-zoom",
+    altUrl: "",
+    right: false
   }
 ];
 
