@@ -76,8 +76,7 @@ const projectData = [
     imageAlt: "motomata",
     url:
       "https://www.figma.com/proto/HJodmY5mLaGjRWP1AtutxXFh/motomata?node-id=51%3A99&viewport=-98%2C359%2C0.262818&scaling=min-zoom",
-    altUrl:
-      "https://www.figma.com/proto/FSJuFiPwohtk8xvDLYm3QIuW/my-go-bus?node-id=0%3A1992&viewport=120%2C207%2C0.182347&scaling=min-zoom",
+    altUrl: "",
     right: true
   },
   {
