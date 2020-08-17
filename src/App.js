@@ -1,10 +1,15 @@
 import React, { Component } from "react";
-import Router from "./Router";
+import { Router } from "react-router-dom";
 import "./App.css";
+import Home from "pages/Home";
 
 class App extends Component {
   render() {
-    return <Router />;
+    return (
+      <div>
+          <Home />
+      </div>
+    );
   }
 }
 

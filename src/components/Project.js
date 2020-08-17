@@ -17,49 +17,6 @@ class Project extends React.Component {
                 <h5 className="project-title">{this.props.name}</h5>
                 <p className="project-category">{this.props.category}</p>
                 <p className="project-description">{this.props.description}</p>
-
-                {isMobile ? (
-                  <a
-                    href={
-                      isIOS ? (!this.isEmpty(this.props.altUrl) ? this.props.altUrl : this.props.url) : this.props.url
-                    }
-                    className="button button__secondary"
-                    title={`${this.props.name} link`}
-                  >
-                    <span className="button-text">view project</span>
-                    <div className="button-mask" />
-                    <span className="button-icon">
-                      <i className="fas fa-long-arrow-alt-right" />
-                    </span>
-                  </a>
-                ) : !this.isEmpty(this.props.url) && !this.isEmpty(this.props.altUrl) ? (
-                  <div className="mobile-app">
-                    <a
-                      href={this.props.url}
-                      className="button button__secondary mobile-app-button"
-                      title={`${this.props.name} link`}
-                    >
-                      Play store
-                      <i className="fab fa-google-play" />
-                    </a>
-                    <a
-                      href={this.props.altUrl}
-                      className="button button__secondary mobile-app-button"
-                      title={`${this.props.name} link`}
-                    >
-                      Apple store
-                      <i className="fab fa-app-store-ios" />
-                    </a>
-                  </div>
-                ) : (
-                  <a href={this.props.url} className="button button__secondary" title={`${this.props.name} link`}>
-                    <span className="button-text">view project</span>
-                    <div className="button-mask" />
-                    <span className="button-icon">
-                      <i className="fas fa-long-arrow-alt-right" />
-                    </span>
-                  </a>
-                )}
               </div>
             </div>
             <div className="col-md-12 col-lg-8">
