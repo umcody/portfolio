@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { isIOS, isMobile } from "react-device-detect";
 import project1 from "../assets/img/project1.png";
 
 class Project extends React.Component {

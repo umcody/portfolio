@@ -25,13 +25,13 @@ class Home extends React.Component {
       <div id="page" className="page">
         <div className="home">
           <div className="container" >
-            <div className="section" style = {{marginTop:"20%",height: "70vh"}}>
+            <div className="section" style = {{marginTop:"10%",height: "70vh"}}>
               <div className="row">
                 <div className="col-md-12 col-lg-7">
                   <h5 className="home-heading">
-                  Hi! I am Cody (Yun Su) Um. I am a developer studying in U.W Madison.
+                  Hi! I am Cody (Yun Su) Um. You can see my past projects here.
                   </h5>
-                  <p className="home-desc">I love building projects of any kind. ANY. </p>
+                  <p className="home-desc">If you have ANY kind of projects in mind, Let me know! </p>
                   <div className="button-block">
                   </div>
                 </div>
@@ -76,13 +76,11 @@ class Home extends React.Component {
                     I am all about learning and new challenges. If you have any projects or opportunities, don't hesitate to reach out!
                   </p>
                   <div className="button-block">
-                    <a href="um5@wisc.edu" className="button">
-                      <span className="button-text">Email Me</span>
+                      <span className="button-text">um5@wisc.edu</span>
                       <div className="button-mask" />
                       <span className="button-icon">
                         <i className="fas fa-long-arrow-alt-right" />
                       </span>
-                    </a>
                   </div>
                 </div>
               </div>
