@@ -20,7 +20,7 @@ class Home extends React.Component {
   }
 
   render() {
-    const projects = ProjectData.slice(0, 3);
+    const projects = ProjectData.slice(0, 4);
     return (
       <div id="page" className="page">
         <div className="home">
