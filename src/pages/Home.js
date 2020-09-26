@@ -38,7 +38,6 @@ class Home extends React.Component {
                 </div>
               </div>
             </div>
-
             <div className="section">
               <div className="row">
                 <div className="col">
