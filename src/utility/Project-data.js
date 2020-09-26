@@ -17,25 +17,25 @@ const projectData = [
     right: false
   },
   {
-    id: 2,
+  id: 2,
+  name: "SubLive",
+  category: "Browser Extension",
+  description:
+    "Winning Google's Best Use of Google Cloud Award, SubLive is a browser extension project aimed to provide real time transcriber specifically for virtual learning environments.",
+  image: sublive,
+  imageAlt: "sublive",
+  url: "",
+  altUrl: "",
+  right: true
+  },
+  {
+    id: 3,
     name: "Campus Ranked",
     category: "Web App",
     description:
       "Campus Ranked is a web platform where students can rank their campus buildings by category. To be launched in Oct. 2020",
     image: campusranked,
     imageAlt: "campusranked",
-    url: "",
-    altUrl: "",
-    right: true
-  },
-  {
-    id: 3,
-    name: "SubLive",
-    category: "Browser Extension",
-    description:
-      "Winning Google's Best Use of Google Cloud Award, SubLive is a browser extension project aimed to provide real time transcriber specifically for virtual learning environments ",
-    image: sublive,
-    imageAlt: "sublive",
     url: "",
     altUrl: "",
     right: false

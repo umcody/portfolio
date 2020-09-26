@@ -32,6 +32,7 @@ class Home extends React.Component {
                   Hi! I am Cody (Yun Su) Um. You can see my past projects here.
                   </h5>
                   <p className="home-desc">If you have ANY kind of projects in mind, Let me know! </p>
+                  <a target = "_blank" style = {{textDecoration:"underline", opacity:"0.9"}}href="https://sites.google.com/view/codyum/home">Click here to go to my Art Portfolio!</a>
                   <div className="button-block">
                   </div>
                 </div>
